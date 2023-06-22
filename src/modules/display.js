@@ -1,3 +1,54 @@
+const projectContainer = () => {
+  const projectContainer = document.createElement("div");
+  projectContainer.id = "project-container";
+
+  return projectContainer;
+};
+
+// Creates the form element for todos.
+const createTodoForm = () => {
+  const form = document.createElement("form");
+
+  // Title
+  const titleRow = document.createElement("div");
+  titleRow.classList.add("form-row");
+  const titleLabel = document.createElement("label");
+  titleLabel.innerHTML = "Title";
+  const titleInput = document.createElement("input");
+
+  titleRow.appendChild(titleLabel);
+  titleRow.appendChild(titleInput);
+
+  // Description
+  const descRow = document.createElement("div");
+  descRow.classList.add("form-row");
+  const descLabel = document.createElement("label");
+  descLabel.innerHTML = "Description";
+  const descInput = document.createElement("input");
+
+  descRow.appendChild(descLabel);
+  descRow.appendChild(descInput);
+
+  // Due date
+  const dateRow = document.createElement("div");
+  dateRow.classList.add("form-row");
+  const dateLabel = document.createElement("label");
+  dateLabel.innerHTML = "Due Date";
+  const dateInput = document.createElement("input");
+  dateInput.type = "date";
+
+  dateRow.appendChild(dateLabel);
+  dateRow.appendChild(dateInput);
+
+  // Priority
+
+  form.appendChild(titleRow);
+  form.appendChild(descRow);
+  form.appendChild(dateRow);
+
+  return form;
+};
+
 // Returns initial page.
 const display = () => {
   const mainpage = document.createElement("div");
