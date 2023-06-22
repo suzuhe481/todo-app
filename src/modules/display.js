@@ -73,6 +73,74 @@ const createTodoForm = () => {
   return form;
 };
 
+const createTodoContainer = () => {
+  var list = [];
+
+  // Dummy data
+  var todo1 = {
+    title: "First title",
+    description: "Description of first todo",
+    dueDate: new Date("2023, 1, 5"),
+    highPriority: 1,
+  };
+
+  var todo2 = {
+    title: "A second title",
+    description: "More stuff to do",
+    dueDate: new Date("2023, 5, 11"),
+    highPriority: 0,
+  };
+
+  var todo3 = {
+    title: "Another todo",
+    description: "Even more stuff",
+    dueDate: new Date("2023, 7, 22"),
+    highPriority: 1,
+  };
+
+  list.push(todo1);
+  list.push(todo2);
+  list.push(todo3);
+
+  const todoContainer = document.createElement("div");
+  todoContainer.id = "todo-container";
+
+  // Appends each todo item to container.
+  for (var i = 0; i < list.length; i++) {
+    const todoItem = document.createElement("div");
+    todoItem.classList.add("todo-item");
+
+    const todoTitle = document.createElement("div");
+    const todoDescription = document.createElement("div");
+    const todoDate = document.createElement("div");
+    const todoPriority = document.createElement("div");
+
+    todoTitle.classList.add("todo-title");
+    todoDescription.classList.add("todo-description");
+    todoDate.classList.add("todo-date");
+    todoPriority.classList.add("todo-priority");
+
+    todoTitle.innerHTML = list[i].title;
+    todoDescription.innerHTML = list[i].description;
+
+    var month = list[i].dueDate.toLocaleString("default", { month: "short" });
+    var day = list[i].dueDate.getDate();
+    var year = list[i].dueDate.getFullYear();
+    todoDate.innerHTML = month + " " + day + ", " + year;
+
+    todoPriority.innerHTML = list[i].highPriority;
+
+    todoItem.appendChild(todoTitle);
+    todoItem.appendChild(todoDescription);
+    todoItem.appendChild(todoDate);
+    todoItem.appendChild(todoPriority);
+
+    todoContainer.appendChild(todoItem);
+  }
+
+  return todoContainer;
+};
+
 // Returns initial page.
 const display = () => {
   const mainpage = document.createElement("div");
@@ -87,6 +155,9 @@ const display = () => {
 
   const todoForm = createTodoForm();
   maincontent.appendChild(todoForm);
+
+  const todoContainer = createTodoContainer();
+  maincontent.appendChild(todoContainer);
 
   mainpage.appendChild(sidebar);
   mainpage.appendChild(maincontent);
