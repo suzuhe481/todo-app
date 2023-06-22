@@ -1,8 +1,8 @@
-const projectContainer = () => {
-  const projectContainer = document.createElement("div");
-  projectContainer.id = "project-container";
+const projectsContainer = () => {
+  const projectsContainer = document.createElement("div");
+  projectContainers.id = "projects-container";
 
-  return projectContainer;
+  return projectsContainer;
 };
 
 // Creates the form element for todos.
@@ -67,7 +67,7 @@ const display = () => {
 
   const sidebar = document.createElement("div");
   sidebar.id = "side-bar";
-  sidebar.appendChild(projectContainer());
+  sidebar.appendChild(projectsContainer());
 
   const maincontent = document.createElement("div");
   maincontent.id = "main-content";
