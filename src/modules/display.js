@@ -1,6 +1,19 @@
 const projectsContainer = () => {
   const projectsContainer = document.createElement("div");
-  projectContainers.id = "projects-container";
+  projectsContainer.id = "projects-container";
+
+  const project1 = document.createElement("div");
+  project1.innerHTML = "Project 1";
+
+  const project2 = document.createElement("div");
+  project2.innerHTML = "Project 2";
+
+  const project3 = document.createElement("div");
+  project3.innerHTML = "Project 3";
+
+  projectsContainer.appendChild(project1);
+  projectsContainer.appendChild(project2);
+  projectsContainer.appendChild(project3);
 
   return projectsContainer;
 };
