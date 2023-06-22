@@ -1,5 +1,5 @@
 import createTodoForm from "../components/todo/todoForm";
-import createTodoItem from "../components/todo/todoItem";
+import createTodoContainer from "../components/todo/todoContainer";
 import createProjectItem from "../components/project/projectItem";
 import createProjectsContainer from "../components/project/projectsContainer";
 
@@ -78,20 +78,6 @@ localStorage.setItem("projectsList", JSON.stringify(projectsList));
 localStorage.setItem("currentProject", 0);
 
 // End dummy data
-
-const createTodoContainer = () => {
-  const todoContainer = document.createElement("div");
-  todoContainer.id = "todo-container";
-
-  // Appends each todo item to container.
-  for (var i = 0; i < todoList1.length; i++) {
-    const todoItem = createTodoItem(todoList1[i]);
-
-    todoContainer.appendChild(todoItem);
-  }
-
-  return todoContainer;
-};
 
 // Returns initial page.
 const display = () => {
