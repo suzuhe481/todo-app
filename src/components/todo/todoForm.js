@@ -6,8 +6,12 @@ const createTodoForm = () => {
   const titleRow = document.createElement("div");
   titleRow.classList.add("form-row");
   const titleLabel = document.createElement("label");
+  titleLabel.for = "todo-title";
   titleLabel.innerHTML = "Title";
   const titleInput = document.createElement("input");
+  titleInput.type = "text";
+  titleInput.id = "todo-title";
+  titleInput.name = "todo-title";
 
   titleRow.appendChild(titleLabel);
   titleRow.appendChild(titleInput);
@@ -16,8 +20,12 @@ const createTodoForm = () => {
   const descRow = document.createElement("div");
   descRow.classList.add("form-row");
   const descLabel = document.createElement("label");
+  descLabel.for = "todo-desc";
   descLabel.innerHTML = "Description";
   const descInput = document.createElement("input");
+  descLabel.type = "text";
+  descLabel.id = "todo-desc;";
+  descLabel.name = "todo-desc";
 
   descRow.appendChild(descLabel);
   descRow.appendChild(descInput);
@@ -26,9 +34,12 @@ const createTodoForm = () => {
   const dateRow = document.createElement("div");
   dateRow.classList.add("form-row");
   const dateLabel = document.createElement("label");
+  dateLabel.for = "todo-date";
   dateLabel.innerHTML = "Due Date";
   const dateInput = document.createElement("input");
   dateInput.type = "date";
+  dateInput.id = "todo-date";
+  dateInput.name = "todo-date";
 
   dateRow.appendChild(dateLabel);
   dateRow.appendChild(dateInput);
@@ -37,9 +48,12 @@ const createTodoForm = () => {
   const priorityRow = document.createElement("div");
   priorityRow.classList.add("form-row");
   const priorityLabel = document.createElement("label");
+  priorityLabel.for = "todo-priority";
   priorityLabel.innerHTML = "High Priority";
   const priorityInput = document.createElement("input");
   priorityInput.type = "checkbox";
+  priorityInput.id = "todo-priority";
+  priorityInput.name = "todo-priority";
 
   priorityRow.appendChild(priorityLabel);
   priorityRow.appendChild(priorityInput);
