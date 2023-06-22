@@ -1,11 +1,5 @@
 import "./styles.css";
 
-function component() {
-  const element = document.createElement("div");
+import display from "./modules/display";
 
-  element.innerHTML = "Todo app";
-
-  return element;
-}
-
-document.body.appendChild(component());
+document.body.appendChild(display());
