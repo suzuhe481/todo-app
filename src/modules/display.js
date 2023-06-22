@@ -41,10 +41,21 @@ const createTodoForm = () => {
   dateRow.appendChild(dateInput);
 
   // Priority
+  const priorityRow = document.createElement("div");
+  priorityRow.classList.add("form-row");
+  const priorityLabel = document.createElement("label");
+  priorityLabel.innerHTML = "High Priority";
+  const priorityInput = document.createElement("input");
+  priorityInput.type = "checkbox";
 
+  priorityRow.appendChild(priorityLabel);
+  priorityRow.appendChild(priorityInput);
+
+  // Adding rows to form
   form.appendChild(titleRow);
   form.appendChild(descRow);
   form.appendChild(dateRow);
+  form.appendChild(priorityRow);
 
   return form;
 };
