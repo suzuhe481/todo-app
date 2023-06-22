@@ -5,15 +5,15 @@ import createProjectsContainer from "../components/project/projectsContainer";
 
 // Dummy data
 
-var projectslist = [];
+var projectsList = [];
 
 var project1 = createProjectItem("Project 1");
 var project2 = createProjectItem("Second project");
 var project3 = createProjectItem("Last project");
 
-projectslist.push(project1);
-projectslist.push(project2);
-projectslist.push(project3);
+projectsList.push(project1);
+projectsList.push(project2);
+projectsList.push(project3);
 
 var todo1 = {
   title: "First title",
@@ -62,19 +62,19 @@ var todoList1 = [];
 todoList1.push(todo1);
 todoList1.push(todo2);
 todoList1.push(todo3);
-projectslist[0].todoList = todoList1;
+projectsList[0].todoList = todoList1;
 
 var todoList2 = [];
 todoList2.push(todo4);
 todoList2.push(todo5);
-projectslist[1].todoList = todoList2;
+projectsList[1].todoList = todoList2;
 
 var todolist3 = [];
 todolist3.push(todo6);
-projectslist[2].todoList = todolist3;
+projectsList[2].todoList = todolist3;
 
 // Local Storage
-localStorage.setItem("projectsList", JSON.stringify(projectslist));
+localStorage.setItem("projectsList", JSON.stringify(projectsList));
 localStorage.setItem("currentProject", 0);
 
 // End dummy data
@@ -100,7 +100,7 @@ const display = () => {
 
   const sidebar = document.createElement("div");
   sidebar.id = "side-bar";
-  sidebar.appendChild(createProjectsContainer(projectslist));
+  sidebar.appendChild(createProjectsContainer(projectsList));
 
   const maincontent = document.createElement("div");
   maincontent.id = "main-content";
