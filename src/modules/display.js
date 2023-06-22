@@ -1,21 +1,15 @@
 import createTodoForm from "../components/todo/todoForm";
 import createTodoItem from "../components/todo/todoItem";
+import createProjectItem from "../components/project/projectItem";
+import createProjectsContainer from "../components/project/projectsContainer";
 
 // Dummy data
 
 var projectslist = [];
 
-var project1 = {
-  name: "Project 1",
-};
-
-var project2 = {
-  name: "Project 2",
-};
-
-var project3 = {
-  name: "Project 3",
-};
+var project1 = createProjectItem("Project 1");
+var project2 = createProjectItem("Second project");
+var project3 = createProjectItem("Last project");
 
 projectslist.push(project1);
 projectslist.push(project2);
@@ -81,21 +75,6 @@ projectslist[2].todoList = todolist3;
 
 // End dummy data
 
-const projectsContainer = () => {
-  const projectsContainer = document.createElement("div");
-  projectsContainer.id = "projects-container";
-
-  // Appends each project as an item to the container.
-  for (var i = 0; i < projectslist.length; i++) {
-    const projectItem = document.createElement("div");
-    projectItem.innerHTML = projectslist[i].name;
-
-    projectsContainer.appendChild(projectItem);
-  }
-
-  return projectsContainer;
-};
-
 const createTodoContainer = () => {
   const todoContainer = document.createElement("div");
   todoContainer.id = "todo-container";
@@ -117,7 +96,7 @@ const display = () => {
 
   const sidebar = document.createElement("div");
   sidebar.id = "side-bar";
-  sidebar.appendChild(projectsContainer());
+  sidebar.appendChild(createProjectsContainer(projectslist));
 
   const maincontent = document.createElement("div");
   maincontent.id = "main-content";
