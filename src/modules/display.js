@@ -1,15 +1,42 @@
+// Dummy data
+
+const project1 = document.createElement("div");
+project1.innerHTML = "Project 1";
+
+const project2 = document.createElement("div");
+project2.innerHTML = "Project 2";
+
+const project3 = document.createElement("div");
+project3.innerHTML = "Project 3";
+
+var list = [];
+
+var todo1 = {
+  title: "First title",
+  description: "Description of first todo",
+  dueDate: new Date("2023, 1, 5"),
+  highPriority: 1,
+};
+
+var todo2 = {
+  title: "A second title",
+  description: "More stuff to do",
+  dueDate: new Date("2023, 5, 11"),
+  highPriority: 0,
+};
+
+var todo3 = {
+  title: "Another todo",
+  description: "Even more stuff",
+  dueDate: new Date("2023, 7, 22"),
+  highPriority: 1,
+};
+
+// End dummy data
+
 const projectsContainer = () => {
   const projectsContainer = document.createElement("div");
   projectsContainer.id = "projects-container";
-
-  const project1 = document.createElement("div");
-  project1.innerHTML = "Project 1";
-
-  const project2 = document.createElement("div");
-  project2.innerHTML = "Project 2";
-
-  const project3 = document.createElement("div");
-  project3.innerHTML = "Project 3";
 
   projectsContainer.appendChild(project1);
   projectsContainer.appendChild(project2);
@@ -74,30 +101,6 @@ const createTodoForm = () => {
 };
 
 const createTodoContainer = () => {
-  var list = [];
-
-  // Dummy data
-  var todo1 = {
-    title: "First title",
-    description: "Description of first todo",
-    dueDate: new Date("2023, 1, 5"),
-    highPriority: 1,
-  };
-
-  var todo2 = {
-    title: "A second title",
-    description: "More stuff to do",
-    dueDate: new Date("2023, 5, 11"),
-    highPriority: 0,
-  };
-
-  var todo3 = {
-    title: "Another todo",
-    description: "Even more stuff",
-    dueDate: new Date("2023, 7, 22"),
-    highPriority: 1,
-  };
-
   list.push(todo1);
   list.push(todo2);
   list.push(todo3);
