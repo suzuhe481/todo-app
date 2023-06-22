@@ -3,7 +3,7 @@ import createTodoItem from "../components/todo/todoItem";
 
 // Dummy data
 
-var projectlist = [];
+var projectslist = [];
 
 var project1 = {
   name: "Project 1",
@@ -17,9 +17,9 @@ var project3 = {
   name: "Project 3",
 };
 
-projectlist.push(project1);
-projectlist.push(project2);
-projectlist.push(project3);
+projectslist.push(project1);
+projectslist.push(project2);
+projectslist.push(project3);
 
 var todo1 = {
   title: "First title",
@@ -68,16 +68,16 @@ var todoList1 = [];
 todoList1.push(todo1);
 todoList1.push(todo2);
 todoList1.push(todo3);
-projectlist[0].todoList = todoList1;
+projectslist[0].todoList = todoList1;
 
 var todoList2 = [];
 todoList2.push(todo4);
 todoList2.push(todo5);
-projectlist[1].todoList = todoList2;
+projectslist[1].todoList = todoList2;
 
 var todolist3 = [];
 todolist3.push(todo6);
-projectlist[2].todoList = todolist3;
+projectslist[2].todoList = todolist3;
 
 // End dummy data
 
@@ -86,9 +86,9 @@ const projectsContainer = () => {
   projectsContainer.id = "projects-container";
 
   // Appends each project as an item to the container.
-  for (var i = 0; i < projectlist.length; i++) {
+  for (var i = 0; i < projectslist.length; i++) {
     const projectItem = document.createElement("div");
-    projectItem.innerHTML = projectlist[i].name;
+    projectItem.innerHTML = projectslist[i].name;
 
     projectsContainer.appendChild(projectItem);
   }
