@@ -61,7 +61,7 @@ const createTodoForm = () => {
   priorityRow.appendChild(priorityInput);
 
   const submitButton = document.createElement("button");
-  submitButton.type = "button";
+  submitButton.type = "submit";
   submitButton.onclick = addTodoItem;
   submitButton.innerHTML = "Submit";
 
