@@ -1,8 +1,5 @@
 // Creates div containing a single todo item.
 const todoItem = (todo) => {
-  console.log("run");
-  console.log(todo);
-
   const todoItem = document.createElement("div");
   todoItem.classList.add("todo-item");
 
