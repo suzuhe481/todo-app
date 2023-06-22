@@ -91,11 +91,16 @@ const createTodoForm = () => {
   priorityRow.appendChild(priorityLabel);
   priorityRow.appendChild(priorityInput);
 
+  const submitButton = document.createElement("button");
+  submitButton.type = "button";
+  submitButton.innerHTML = "Submit";
+
   // Adding rows to form
   form.appendChild(titleRow);
   form.appendChild(descRow);
   form.appendChild(dateRow);
   form.appendChild(priorityRow);
+  form.appendChild(submitButton);
 
   return form;
 };
