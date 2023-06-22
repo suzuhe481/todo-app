@@ -26,35 +26,35 @@ var todo2 = {
   title: "A second title",
   description: "More stuff to do",
   dueDate: new Date("2023, 5, 11"),
-  highPriority: 0,
+  highPriority: false,
 };
 
 var todo3 = {
   title: "Another todo",
   description: "Even more stuff",
   dueDate: new Date("2023, 7, 22"),
-  highPriority: 1,
+  highPriority: true,
 };
 
 var todo4 = {
   title: "A fourth title",
   description: "Stuff for project 2",
   dueDate: new Date("2023, 5, 11"),
-  highPriority: 0,
+  highPriority: false,
 };
 
 var todo5 = {
   title: "More list",
   description: "Another todo item for project 2",
   dueDate: new Date("2023, 7, 22"),
-  highPriority: 1,
+  highPriority: true,
 };
 
 var todo6 = {
   title: "Todo on project 3",
   description: "Even more stuff",
   dueDate: new Date("2023, 7, 22"),
-  highPriority: 1,
+  highPriority: true,
 };
 
 // Adding dummy data.
@@ -72,6 +72,10 @@ projectslist[1].todoList = todoList2;
 var todolist3 = [];
 todolist3.push(todo6);
 projectslist[2].todoList = todolist3;
+
+// Local Storage
+localStorage.setItem("projectsList", JSON.stringify(projectslist));
+localStorage.setItem("currentProject", 0);
 
 // End dummy data
 
