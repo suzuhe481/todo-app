@@ -25,9 +25,9 @@ const createTodoForm = () => {
   descLabel.for = "todo-desc";
   descLabel.innerHTML = "Description";
   const descInput = document.createElement("input");
-  descLabel.type = "text";
-  descLabel.id = "todo-desc;";
-  descLabel.name = "todo-desc";
+  descInput.type = "text";
+  descInput.id = "todo-desc";
+  descInput.name = "todo-desc";
 
   descRow.appendChild(descLabel);
   descRow.appendChild(descInput);
