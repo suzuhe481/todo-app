@@ -1,3 +1,6 @@
+import createTodoForm from "../components/todo/todoForm";
+import createTodoItem from "../components/todo/todoItem";
+
 // Dummy data
 
 const project1 = document.createElement("div");
@@ -45,67 +48,8 @@ const projectsContainer = () => {
   return projectsContainer;
 };
 
-// Creates the form element for todos.
-const createTodoForm = () => {
-  const form = document.createElement("form");
-
-  // Title
-  const titleRow = document.createElement("div");
-  titleRow.classList.add("form-row");
-  const titleLabel = document.createElement("label");
-  titleLabel.innerHTML = "Title";
-  const titleInput = document.createElement("input");
-
-  titleRow.appendChild(titleLabel);
-  titleRow.appendChild(titleInput);
-
-  // Description
-  const descRow = document.createElement("div");
-  descRow.classList.add("form-row");
-  const descLabel = document.createElement("label");
-  descLabel.innerHTML = "Description";
-  const descInput = document.createElement("input");
-
-  descRow.appendChild(descLabel);
-  descRow.appendChild(descInput);
-
-  // Due date
-  const dateRow = document.createElement("div");
-  dateRow.classList.add("form-row");
-  const dateLabel = document.createElement("label");
-  dateLabel.innerHTML = "Due Date";
-  const dateInput = document.createElement("input");
-  dateInput.type = "date";
-
-  dateRow.appendChild(dateLabel);
-  dateRow.appendChild(dateInput);
-
-  // Priority
-  const priorityRow = document.createElement("div");
-  priorityRow.classList.add("form-row");
-  const priorityLabel = document.createElement("label");
-  priorityLabel.innerHTML = "High Priority";
-  const priorityInput = document.createElement("input");
-  priorityInput.type = "checkbox";
-
-  priorityRow.appendChild(priorityLabel);
-  priorityRow.appendChild(priorityInput);
-
-  const submitButton = document.createElement("button");
-  submitButton.type = "button";
-  submitButton.innerHTML = "Submit";
-
-  // Adding rows to form
-  form.appendChild(titleRow);
-  form.appendChild(descRow);
-  form.appendChild(dateRow);
-  form.appendChild(priorityRow);
-  form.appendChild(submitButton);
-
-  return form;
-};
-
 const createTodoContainer = () => {
+  // Adding dummy data.
   list.push(todo1);
   list.push(todo2);
   list.push(todo3);
@@ -115,33 +59,7 @@ const createTodoContainer = () => {
 
   // Appends each todo item to container.
   for (var i = 0; i < list.length; i++) {
-    const todoItem = document.createElement("div");
-    todoItem.classList.add("todo-item");
-
-    const todoTitle = document.createElement("div");
-    const todoDescription = document.createElement("div");
-    const todoDate = document.createElement("div");
-    const todoPriority = document.createElement("div");
-
-    todoTitle.classList.add("todo-title");
-    todoDescription.classList.add("todo-description");
-    todoDate.classList.add("todo-date");
-    todoPriority.classList.add("todo-priority");
-
-    todoTitle.innerHTML = list[i].title;
-    todoDescription.innerHTML = list[i].description;
-
-    var month = list[i].dueDate.toLocaleString("default", { month: "short" });
-    var day = list[i].dueDate.getDate();
-    var year = list[i].dueDate.getFullYear();
-    todoDate.innerHTML = month + " " + day + ", " + year;
-
-    todoPriority.innerHTML = list[i].highPriority;
-
-    todoItem.appendChild(todoTitle);
-    todoItem.appendChild(todoDescription);
-    todoItem.appendChild(todoDate);
-    todoItem.appendChild(todoPriority);
+    const todoItem = createTodoItem(list[i]);
 
     todoContainer.appendChild(todoItem);
   }
