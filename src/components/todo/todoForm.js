@@ -1,3 +1,5 @@
+import addTodoItem from "./addTodoItem";
+
 // Creates the form element for todos.
 const createTodoForm = () => {
   const form = document.createElement("form");
@@ -60,6 +62,7 @@ const createTodoForm = () => {
 
   const submitButton = document.createElement("button");
   submitButton.type = "button";
+  submitButton.onclick = addTodoItem;
   submitButton.innerHTML = "Submit";
 
   // Adding rows to form
