@@ -3,16 +3,23 @@ import createTodoItem from "../components/todo/todoItem";
 
 // Dummy data
 
-const project1 = document.createElement("div");
-project1.innerHTML = "Project 1";
+var projectlist = [];
 
-const project2 = document.createElement("div");
-project2.innerHTML = "Project 2";
+var project1 = {
+  name: "Project 1",
+};
 
-const project3 = document.createElement("div");
-project3.innerHTML = "Project 3";
+var project2 = {
+  name: "Project 2",
+};
 
-var list = [];
+var project3 = {
+  name: "Project 3",
+};
+
+projectlist.push(project1);
+projectlist.push(project2);
+projectlist.push(project3);
 
 var todo1 = {
   title: "First title",
@@ -35,31 +42,67 @@ var todo3 = {
   highPriority: 1,
 };
 
+var todo4 = {
+  title: "A fourth title",
+  description: "Stuff for project 2",
+  dueDate: new Date("2023, 5, 11"),
+  highPriority: 0,
+};
+
+var todo5 = {
+  title: "More list",
+  description: "Another todo item for project 2",
+  dueDate: new Date("2023, 7, 22"),
+  highPriority: 1,
+};
+
+var todo6 = {
+  title: "Todo on project 3",
+  description: "Even more stuff",
+  dueDate: new Date("2023, 7, 22"),
+  highPriority: 1,
+};
+
+// Adding dummy data.
+var todoList1 = [];
+todoList1.push(todo1);
+todoList1.push(todo2);
+todoList1.push(todo3);
+projectlist[0].todoList = todoList1;
+
+var todoList2 = [];
+todoList2.push(todo4);
+todoList2.push(todo5);
+projectlist[1].todoList = todoList2;
+
+var todolist3 = [];
+todolist3.push(todo6);
+projectlist[2].todoList = todolist3;
+
 // End dummy data
 
 const projectsContainer = () => {
   const projectsContainer = document.createElement("div");
   projectsContainer.id = "projects-container";
 
-  projectsContainer.appendChild(project1);
-  projectsContainer.appendChild(project2);
-  projectsContainer.appendChild(project3);
+  // Appends each project as an item to the container.
+  for (var i = 0; i < projectlist.length; i++) {
+    const projectItem = document.createElement("div");
+    projectItem.innerHTML = projectlist[i].name;
+
+    projectsContainer.appendChild(projectItem);
+  }
 
   return projectsContainer;
 };
 
 const createTodoContainer = () => {
-  // Adding dummy data.
-  list.push(todo1);
-  list.push(todo2);
-  list.push(todo3);
-
   const todoContainer = document.createElement("div");
   todoContainer.id = "todo-container";
 
   // Appends each todo item to container.
-  for (var i = 0; i < list.length; i++) {
-    const todoItem = createTodoItem(list[i]);
+  for (var i = 0; i < todoList1.length; i++) {
+    const todoItem = createTodoItem(todoList1[i]);
 
     todoContainer.appendChild(todoItem);
   }
