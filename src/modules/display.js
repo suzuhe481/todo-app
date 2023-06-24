@@ -79,6 +79,19 @@ localStorage.setItem("currentProject", 0);
 
 // End dummy data
 
+// Switches todo list based on current project.
+const displaySwitchedProject = () => {
+  const maincontentElement = document.getElementById("main-content");
+
+  // Deletes current todoContainer Element.
+  const todoContainerElement = document.getElementById("todo-container");
+  todoContainerElement.remove();
+
+  const todoContainer = createTodoContainer();
+
+  maincontentElement.appendChild(todoContainer);
+};
+
 // Returns initial page.
 const display = () => {
   const mainpage = document.createElement("div");
@@ -103,4 +116,4 @@ const display = () => {
   return mainpage;
 };
 
-export default display;
+export { display, displaySwitchedProject };
