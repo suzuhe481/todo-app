@@ -3,6 +3,7 @@ import addTodoItem from "./addTodoItem";
 // Creates the form element for todos.
 const createTodoForm = () => {
   const form = document.createElement("form");
+  form.id = "todo-form";
 
   // Title
   const titleRow = document.createElement("div");
