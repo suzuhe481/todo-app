@@ -78,13 +78,31 @@ import createProjectsContainer from "../components/project/projectsContainer";
 
 // End dummy data
 
+// Displays updated project names.
+const displayUpdatedProjects = () => {
+  const sidebarElement = document.getElementById("side-bar");
+
+  // Deletes current project container.
+  const projectsContainerElement =
+    document.getElementById("projects-container");
+  projectsContainerElement.remove();
+
+  const projectContainer = createProjectsContainer();
+
+  console.log(projectContainer);
+
+  sidebarElement.appendChild(projectContainer);
+};
+
 // Switches todo list based on current project.
 const displaySwitchedProject = () => {
   const maincontentElement = document.getElementById("main-content");
 
   // Deletes current todoContainer Element.
   const todoContainerElement = document.getElementById("todo-container");
-  todoContainerElement.remove();
+  if (todoContainerElement) {
+    todoContainerElement.remove();
+  }
 
   const todoContainer = createTodoContainer();
 
@@ -115,4 +133,4 @@ const display = () => {
   return mainpage;
 };
 
-export { display, displaySwitchedProject };
+export { display, displaySwitchedProject, displayUpdatedProjects };
