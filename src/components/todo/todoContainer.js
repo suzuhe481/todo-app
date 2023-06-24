@@ -1,10 +1,10 @@
-import createTodoItem from "../todo/todoItem";
+import createTodoItem from "./todoItem";
 
 const todoContainer = () => {
   var projectsList = JSON.parse(localStorage.getItem("projectsList"));
   var currentProject = localStorage.getItem("currentProject");
 
-  var todoList = projectsList[currentProject];
+  var todoList = projectsList[currentProject].todoList;
 
   const todoContainer = document.createElement("div");
   todoContainer.id = "todo-container";
