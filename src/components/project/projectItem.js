@@ -2,6 +2,7 @@
 const projectItem = (projectName) => {
   var project = {
     name: projectName,
+    todoList: [],
   };
 
   return project;
