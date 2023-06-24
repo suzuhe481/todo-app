@@ -16,9 +16,12 @@ const todoItem = (todo) => {
   todoTitle.innerHTML = todo.title;
   todoDescription.innerHTML = todo.description;
 
-  var month = todo.dueDate.toLocaleString("default", { month: "short" });
-  var day = todo.dueDate.getDate();
-  var year = todo.dueDate.getFullYear();
+  var dateRetrieved = new Date(todo.dueDate);
+
+  // Getting individual date elements.
+  var month = dateRetrieved.toLocaleString("default", { month: "short" });
+  var day = dateRetrieved.getDate();
+  var year = dateRetrieved.getFullYear();
   todoDate.innerHTML = month + " " + day + ", " + year;
 
   todoPriority.innerHTML = todo.highPriority;
