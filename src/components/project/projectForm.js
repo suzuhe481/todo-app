@@ -6,6 +6,7 @@ const createProjectForm = () => {
   form.classList.add("form-row");
 
   const nameRow = document.createElement("div");
+  nameRow.classList.add("form-row");
 
   const nameLabel = document.createElement("label");
   nameLabel.for = "project-name";
