@@ -14,6 +14,7 @@ const projectsContainer = () => {
     const projectItem = document.createElement("div");
     projectItem.dataset.value = i;
     projectItem.innerHTML = projectsList[i].name;
+    projectItem.classList.add("project-item");
 
     projectItem.addEventListener("click", switchProjectHandler);
 
