@@ -1,4 +1,4 @@
-import createProjectItem from "./projectItem";
+import { projectItemObject } from "./projectItem";
 import { displayUpdatedProjects } from "../../modules/display";
 
 const addProjectItem = () => {
@@ -13,7 +13,7 @@ const addProjectItem = () => {
   var form = document.getElementById("project-form");
   form.reset();
 
-  var newProject = createProjectItem(projectName);
+  var newProject = projectItemObject(projectName);
 
   projectsList.push(newProject);
 
