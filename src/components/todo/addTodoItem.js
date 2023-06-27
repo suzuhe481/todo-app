@@ -13,6 +13,11 @@ const addTodoItem = () => {
   var dueDate = document.getElementById("todo-date").value;
   var priority = document.getElementById("todo-priority").checked;
 
+  // Returns if title, description, or duedate is empty.
+  if (title == "" || desc == "" || dueDate == "") {
+    return;
+  }
+
   // Clear form.
   var form = document.getElementById("todo-form");
   form.reset();
