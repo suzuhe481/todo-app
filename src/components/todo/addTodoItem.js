@@ -1,4 +1,4 @@
-import { displaySwitchedProject } from "../../modules/display";
+import { displayUpdatedTodoList } from "../../modules/display";
 
 const addTodoItem = () => {
   event.preventDefault();
@@ -31,7 +31,7 @@ const addTodoItem = () => {
   // Update localStorage
   localStorage.setItem("projectsList", JSON.stringify(projectsList));
 
-  displaySwitchedProject();
+  displayUpdatedTodoList();
 };
 
 export default addTodoItem;
