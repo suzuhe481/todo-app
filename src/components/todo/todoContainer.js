@@ -16,7 +16,7 @@ const todoContainer = () => {
 
   // Appends each todo item to container.
   for (var i = 0; i < todoList.length; i++) {
-    const todoItem = createTodoItem(todoList[i]);
+    const todoItem = createTodoItem(todoList[i], i);
 
     todoContainer.appendChild(todoItem);
   }
