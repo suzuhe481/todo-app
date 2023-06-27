@@ -1,3 +1,5 @@
+import removeProjectItem from "./removeProjectItem";
+
 // Creates empty project object with given name.
 const projectItemObject = (projectName) => {
   var project = {
@@ -14,6 +16,13 @@ const projectItem = (project, index) => {
   projectItem.dataset.value = index;
   projectItem.innerHTML = project.name;
   projectItem.classList.add("project-item");
+
+  const removeButton = document.createElement("button");
+  removeButton.type = "button";
+  removeButton.addEventListener("click", removeProjectItem);
+  removeButton.innerHTML = "X";
+
+  projectItem.appendChild(removeButton);
 
   return projectItem;
 };
