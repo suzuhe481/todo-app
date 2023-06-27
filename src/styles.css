@@ -111,3 +111,31 @@ body {
   padding: 5px 15px;
   margin: 5px 0;
 }
+
+#todo-container > .todo-item > .todo-title {
+  text-decoration: underline;
+  text-align: center;
+}
+
+#todo-container > .todo-item > .todo-description {
+  font-style: italic;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#todo-container > .todo-item > .todo-date {
+  margin-top: 25px;
+}
+
+/* Styles for high priority items. */
+#todo-container .high-priority {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+#todo-container > .todo-item > button {
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
