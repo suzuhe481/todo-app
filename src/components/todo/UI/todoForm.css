@@ -1,0 +1,33 @@
+/* Styles the todo form for new todo items */
+#todo-form {
+  border: 1px solid white;
+  border-radius: 15px;
+
+  background-color: rgb(153 153 153 / 50%);
+
+  display: table;
+
+  width: 350px;
+  padding: 15px 15px;
+}
+
+#todo-form .form-row {
+  display: table-row;
+}
+
+#todo-form .form-row > * {
+  display: table-cell;
+}
+
+/* Aligns every label in the todo form to the top left */
+#todo-form .form-row > label {
+  text-align: left;
+  vertical-align: top;
+}
+
+#todo-form > button {
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin-top: 10px;
+}

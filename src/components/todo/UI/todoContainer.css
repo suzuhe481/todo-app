@@ -1,0 +1,16 @@
+/* Styles for the todo container */
+#todo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Empty todo message */
+#todo-container > #empty-todo-message {
+  border: 1px solid white;
+  border-radius: 15px;
+
+  background-color: rgb(153 153 153 / 50%);
+  padding: 35px 45px;
+  margin-top: 10px;
+}

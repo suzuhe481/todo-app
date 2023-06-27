@@ -1,0 +1,39 @@
+.todo-item {
+  border: 1px solid white;
+  border-radius: 15px;
+
+  background-color: rgb(153 153 153 / 50%);
+
+  width: 250px;
+
+  padding: 5px 15px;
+  margin: 5px 0;
+}
+
+.todo-item > .todo-title {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.todo-item > .todo-description {
+  font-style: italic;
+
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.todo-item > .todo-date {
+  margin-top: 25px;
+}
+
+/* Styles for high priority items. */
+.high-priority {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.todo-item > button {
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
