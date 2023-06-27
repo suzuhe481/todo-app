@@ -1,7 +1,10 @@
+import removeTodoItem from "./removeTodoItem";
+
 // Creates div containing a single todo item.
-const todoItem = (todo) => {
+const todoItem = (todo, index) => {
   const todoItem = document.createElement("div");
   todoItem.classList.add("todo-item");
+  todoItem.dataset.value = index;
 
   const todoTitle = document.createElement("div");
   const todoDescription = document.createElement("div");
@@ -30,10 +33,17 @@ const todoItem = (todo) => {
     todoItem.classList.add("high-priority");
   }
 
+  const removeButton = document.createElement("button");
+  removeButton.type = "button";
+  removeButton.addEventListener("click", removeTodoItem);
+  removeButton.innerHTML = "Clear Todo";
+
   todoItem.appendChild(todoTitle);
   todoItem.appendChild(todoDescription);
   todoItem.appendChild(todoDate);
   todoItem.appendChild(todoPriority);
+
+  todoItem.appendChild(removeButton);
 
   return todoItem;
 };
