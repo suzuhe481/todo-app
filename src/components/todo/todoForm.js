@@ -15,6 +15,7 @@ const createTodoForm = () => {
   titleInput.type = "text";
   titleInput.id = "todo-title";
   titleInput.name = "todo-title";
+  titleInput.required = true;
 
   titleRow.appendChild(titleLabel);
   titleRow.appendChild(titleInput);
@@ -29,6 +30,7 @@ const createTodoForm = () => {
   descInput.type = "text";
   descInput.id = "todo-desc";
   descInput.name = "todo-desc";
+  descInput.required = true;
 
   descRow.appendChild(descLabel);
   descRow.appendChild(descInput);
@@ -43,6 +45,7 @@ const createTodoForm = () => {
   dateInput.type = "date";
   dateInput.id = "todo-date";
   dateInput.name = "todo-date";
+  dateInput.required = true;
 
   dateRow.appendChild(dateLabel);
   dateRow.appendChild(dateInput);

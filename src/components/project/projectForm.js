@@ -16,6 +16,7 @@ const createProjectForm = () => {
   nameInput.type = "text";
   nameInput.id = "project-name";
   nameInput.name = "project-name";
+  nameInput.required = true;
 
   form.appendChild(nameLabel);
   form.appendChild(nameInput);
