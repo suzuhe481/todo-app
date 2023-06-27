@@ -7,12 +7,17 @@ const todoContainer = () => {
   const todoContainer = document.createElement("div");
   todoContainer.id = "todo-container";
 
-  // If a todolist exists for the currentProject, retrieve it.
-  if (projectsList[currentProject]) {
-    var todoList = projectsList[currentProject].todoList;
-  } else {
+  // If todoList in current project is empty, return empty todoContainer.
+  if (projectsList[currentProject].todoList.length == 0) {
+    const todoEmptyMessage = document.createElement("div");
+    todoEmptyMessage.id = "empty-todo-message";
+    todoEmptyMessage.innerHTML = "No todos in this project.";
+    todoContainer.appendChild(todoEmptyMessage);
+
     return todoContainer;
+  } else {
   }
+  var todoList = projectsList[currentProject].todoList;
 
   // Appends each todo item to container.
   for (var i = 0; i < todoList.length; i++) {
