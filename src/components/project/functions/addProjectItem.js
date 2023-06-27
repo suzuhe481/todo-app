@@ -1,5 +1,8 @@
 import { projectItemObject } from "../UI/projectItem";
-import { displayUpdatedProjects } from "../../../modules/display";
+import {
+  displayUpdatedProjects,
+  displayUpdatedTodoList,
+} from "../../../modules/display";
 
 const addProjectItem = () => {
   event.preventDefault();
@@ -25,7 +28,13 @@ const addProjectItem = () => {
   // Update localStorage
   localStorage.setItem("projectsList", JSON.stringify(projectsList));
 
+  // Switch currentProject to newly added project in localstorage.
+  var currentProject = localStorage.getItem("currentProject");
+  currentProject = projectsList.length;
+  localStorage.setItem("currentProject", currentProject);
+
   displayUpdatedProjects();
+  displayUpdatedTodoList();
 };
 
 export default addProjectItem;
