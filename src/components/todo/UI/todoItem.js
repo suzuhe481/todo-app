@@ -1,4 +1,4 @@
-import removeTodoItem from "./removeTodoItem";
+import removeTodoItem from "../functions/removeTodoItem";
 
 // Creates div containing a single todo item.
 const todoItem = (todo, index) => {

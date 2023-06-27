@@ -1,5 +1,5 @@
-import { projectItemObject } from "./projectItem";
-import { displayUpdatedProjects } from "../../modules/display";
+import { projectItemObject } from "../UI/projectItem";
+import { displayUpdatedProjects } from "../../../modules/display";
 
 const addProjectItem = () => {
   event.preventDefault();

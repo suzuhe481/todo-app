@@ -1,4 +1,4 @@
-import { displayUpdatedTodoList } from "../../modules/display";
+import { displayUpdatedTodoList } from "../../../modules/display";
 
 const switchProjectHandler = (event) => {
   //  Retrieve project to switch to from element clicked.

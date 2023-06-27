@@ -1,6 +1,6 @@
-import createTodoForm from "../components/todo/todoForm";
-import createTodoContainer from "../components/todo/todoContainer";
-import createProjectsContainer from "../components/project/projectsContainer";
+import createTodoForm from "../components/todo/UI/todoForm";
+import createTodoContainer from "../components/todo/UI/todoContainer";
+import createProjectsContainer from "../components/project/UI/projectsContainer";
 
 // Displays updated project names.
 const displayUpdatedProjects = () => {

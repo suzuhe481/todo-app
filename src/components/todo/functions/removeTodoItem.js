@@ -1,4 +1,4 @@
-import { displayUpdatedTodoList } from "../../modules/display";
+import { displayUpdatedTodoList } from "../../../modules/display";
 
 const removeTodoItem = (event) => {
   console.log("removing");

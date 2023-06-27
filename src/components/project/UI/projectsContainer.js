@@ -1,7 +1,7 @@
 import createProjectForm from "./projectForm";
 import { projectItem as createProjectItem } from "./projectItem";
 
-import switchProjectHandler from "./switchProjectHandler";
+import switchProjectHandler from "../functions/switchProjectHandler";
 
 const projectsContainer = () => {
   const projectsContainer = document.createElement("div");

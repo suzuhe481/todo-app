@@ -1,4 +1,4 @@
-import addTodoItem from "./addTodoItem";
+import addTodoItem from "../functions/addTodoItem";
 
 // Creates the form element for todos.
 const createTodoForm = () => {

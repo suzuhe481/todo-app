@@ -1,4 +1,4 @@
-import removeProjectItem from "./removeProjectItem";
+import removeProjectItem from "../functions/removeProjectItem";
 
 // Creates empty project object with given name.
 const projectItemObject = (projectName) => {

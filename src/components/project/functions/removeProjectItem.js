@@ -1,4 +1,4 @@
-import { displayUpdatedProjects } from "../../modules/display";
+import { displayUpdatedProjects } from "../../../modules/display";
 
 // Removes a project.
 const removeProjectItem = (event) => {

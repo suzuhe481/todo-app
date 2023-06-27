@@ -1,4 +1,4 @@
-import addProjectItem from "../project/addProjectItem";
+import addProjectItem from "../functions/addProjectItem";
 
 const createProjectForm = () => {
   const form = document.createElement("form");
