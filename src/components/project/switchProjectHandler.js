@@ -1,4 +1,4 @@
-import { displaySwitchedProject } from "../../modules/display";
+import { displayUpdatedTodoList } from "../../modules/display";
 
 const switchProjectHandler = (event) => {
   //  Retrieve project to switch to from element clicked.
@@ -7,7 +7,7 @@ const switchProjectHandler = (event) => {
   //  Changes localStorage of variable "currentProject" to the project number clicked.
   localStorage.setItem("currentProject", projectNumToSwitch);
 
-  displaySwitchedProject();
+  displayUpdatedTodoList();
 };
 
 export default switchProjectHandler;

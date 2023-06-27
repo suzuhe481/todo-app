@@ -17,7 +17,7 @@ const displayUpdatedProjects = () => {
 };
 
 // Switches todo list based on current project.
-const displaySwitchedProject = () => {
+const displayUpdatedTodoList = () => {
   const maincontentElement = document.getElementById("main-content");
 
   // Deletes current todoContainer Element.
@@ -55,4 +55,4 @@ const display = () => {
   return mainpage;
 };
 
-export { display, displaySwitchedProject, displayUpdatedProjects };
+export { display, displayUpdatedTodoList, displayUpdatedProjects };
