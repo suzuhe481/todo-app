@@ -13,6 +13,13 @@ const addTodoItem = () => {
   var dueDate = document.getElementById("todo-date").value;
   var priority = document.getElementById("todo-priority").checked;
 
+  // Prevents adding new todo item.
+  // Returns if projectsList is undefined or empty.
+  if (projectsList === undefined || projectsList.length == 0) {
+    return;
+  }
+
+  // Prevents adding new todo item.
   // Returns if title, description, or duedate is empty.
   if (title == "" || desc == "" || dueDate == "") {
     return;
@@ -35,6 +42,7 @@ const addTodoItem = () => {
 
   // Update localStorage
   localStorage.setItem("projectsList", JSON.stringify(projectsList));
+  localStorage.setItem("currentProject", currentProject);
 
   displayUpdatedTodoList();
 };
