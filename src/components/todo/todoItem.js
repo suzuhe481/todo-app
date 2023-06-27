@@ -22,9 +22,13 @@ const todoItem = (todo) => {
   var month = dateRetrieved.toLocaleString("default", { month: "short" });
   var day = dateRetrieved.getDate();
   var year = dateRetrieved.getFullYear();
-  todoDate.innerHTML = month + " " + day + ", " + year;
+  todoDate.innerHTML = "Due: " + month + " " + day + ", " + year;
 
   todoPriority.innerHTML = todo.highPriority;
+
+  if (todo.highPriority) {
+    todoItem.classList.add("high-priority");
+  }
 
   todoItem.appendChild(todoTitle);
   todoItem.appendChild(todoDescription);
