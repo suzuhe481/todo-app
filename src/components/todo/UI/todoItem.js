@@ -1,5 +1,7 @@
 import removeTodoItem from "../functions/removeTodoItem";
 
+import "./todoItem.css";
+
 // Creates div containing a single todo item.
 const todoItem = (todo, index) => {
   const todoItem = document.createElement("div");

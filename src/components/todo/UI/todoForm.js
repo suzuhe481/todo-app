@@ -1,5 +1,7 @@
 import addTodoItem from "../functions/addTodoItem";
 
+import "./todoForm.css";
+
 // Creates the form element for todos.
 const createTodoForm = () => {
   const form = document.createElement("form");

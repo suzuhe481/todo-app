@@ -1,5 +1,7 @@
 import removeProjectItem from "../functions/removeProjectItem";
 
+import "./projectItem.css";
+
 // Creates empty project object with given name.
 const projectItemObject = (projectName) => {
   var project = {

@@ -1,5 +1,7 @@
 import addProjectItem from "../functions/addProjectItem";
 
+import "./projectForm.css";
+
 const createProjectForm = () => {
   const form = document.createElement("form");
   form.id = "project-form";

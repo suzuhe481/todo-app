@@ -1,5 +1,7 @@
 import createTodoItem from "./todoItem";
 
+import "./todoContainer.css";
+
 const todoContainer = () => {
   var projectsList = JSON.parse(localStorage.getItem("projectsList"));
   var currentProject = localStorage.getItem("currentProject");
