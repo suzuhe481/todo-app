@@ -1,7 +1,5 @@
 import "./styles.css";
 
-import createProjectItem from "./components/project/projectItem";
-
 import { display } from "./modules/display";
 
 if (!localStorage.getItem("projectsList")) {
