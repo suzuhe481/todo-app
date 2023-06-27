@@ -9,6 +9,11 @@ const addProjectItem = () => {
 
   var projectName = document.getElementById("project-name").value;
 
+  // Returns if projectName is empty
+  if (projectName == "") {
+    return;
+  }
+
   // Clear form.
   var form = document.getElementById("project-form");
   form.reset();
