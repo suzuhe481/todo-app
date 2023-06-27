@@ -1,4 +1,5 @@
 import createProjectForm from "./projectForm";
+import { projectItem as createProjectItem } from "./projectItem";
 
 import switchProjectHandler from "./switchProjectHandler";
 
@@ -11,10 +12,7 @@ const projectsContainer = () => {
 
   // Appends each project as an item to the container.
   for (var i = 0; i < projectsList.length; i++) {
-    const projectItem = document.createElement("div");
-    projectItem.dataset.value = i;
-    projectItem.innerHTML = projectsList[i].name;
-    projectItem.classList.add("project-item");
+    const projectItem = createProjectItem(projectsList[i], i);
 
     projectItem.addEventListener("click", switchProjectHandler);
 
