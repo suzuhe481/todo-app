@@ -1,7 +1,6 @@
 import { displayUpdatedTodoList } from "../../../modules/display";
 
 const removeTodoItem = (event) => {
-  console.log("removing");
   var projectsList = JSON.parse(localStorage.getItem("projectsList"));
   var currentProject = localStorage.getItem("currentProject");
 
